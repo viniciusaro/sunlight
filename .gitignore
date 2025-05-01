@@ -118,3 +118,7 @@ app.*.symbols
 
 # FVM Version Cache
 .fvm/
+
+# IDE
+**/.idea/
+**/*.iml
