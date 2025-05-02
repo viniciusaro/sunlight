@@ -1,6 +1,6 @@
-import 'package:sunshine/clients/analytics_client.dart';
-import 'package:sunshine/clients/board_client.dart';
-import 'package:sunshine/clients/snapshot_client.dart';
+import 'package:sunshine_events/clients/analytics_client.dart';
+import 'package:sunshine_events/clients/board_client.dart';
+import 'package:sunshine_events/clients/snapshot_client.dart';
 
 final snapshotAnalyticsClient = () {
   String? lastId;

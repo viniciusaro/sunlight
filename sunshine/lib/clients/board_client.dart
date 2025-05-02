@@ -1,5 +1,5 @@
 import 'package:mutex/mutex.dart';
-import 'package:sunshine/clients/logger_client.dart';
+import 'package:sunshine_events/clients/logger_client.dart';
 
 var boardClient = unimplementedBoardClient;
 

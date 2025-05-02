@@ -1,11 +1,11 @@
 import 'package:screenshot/screenshot.dart';
-import 'package:sunshine/clients/analytics_client.live.dart';
-import 'package:sunshine/clients/analytics_client.dart' as analytics;
-import 'package:sunshine/clients/board_client.dart' as board;
-import 'package:sunshine/clients/logger_client.dart' as logger;
-import 'package:sunshine/clients/logger_client.live.dart';
-import 'package:sunshine/clients/snapshot_client.dart' as snapshot;
-import 'package:sunshine/clients/snapshot_client.live.dart';
+import 'package:sunshine_events/clients/analytics_client.live.dart';
+import 'package:sunshine_events/clients/analytics_client.dart' as analytics;
+import 'package:sunshine_events/clients/board_client.dart' as board;
+import 'package:sunshine_events/clients/logger_client.dart' as logger;
+import 'package:sunshine_events/clients/logger_client.live.dart';
+import 'package:sunshine_events/clients/snapshot_client.dart' as snapshot;
+import 'package:sunshine_events/clients/snapshot_client.live.dart';
 
 abstract class SunshineAnalytics {
   static ScreenshotController screenshotController = ScreenshotController();

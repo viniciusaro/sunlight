@@ -1,6 +1,6 @@
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
-import 'package:sunshine/clients/snapshot_client.dart';
+import 'package:sunshine_events/clients/snapshot_client.dart';
 
 SnapshotClient screenshotSnapshotClient(
   ScreenshotController screenshotController,

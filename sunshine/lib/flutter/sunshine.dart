@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:screenshot/screenshot.dart';
-import 'package:sunshine/analytics/sunshine.dart';
+import 'package:sunshine_events/analytics/sunshine.dart';
 
 class Sunshine extends StatelessWidget {
   final Widget child;
