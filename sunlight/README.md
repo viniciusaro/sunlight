@@ -41,7 +41,7 @@ SunlightAnalytics.setup(
 ```dart
 runApp(
   MaterialApp(
-    home: Sunlight(
+    home: sunlight(
       child: Home(),
     ),
   ),
@@ -55,7 +55,7 @@ example: _main.dev.dart_
 class CurrentAnalyticsLogger {
   Future<void> logEvent(String name) {
     // current analytics logging.
-    return SunlightAnalytics.log(name: name);
+    eturn SunlightAnalytics.log(name: name);
   }
 }
 ```
@@ -64,7 +64,7 @@ class CurrentAnalyticsLogger {
 
 Sending a screenshot for every event fired might become heavy for production builds. That is why we recommend setting sunlight up only for development/internal builds. That is usually enough to cover all app paths without adding overhead to your production users.
 
-> If `SunlightAnalytics.setup` is never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
+ If `SunlightAnalytics.setup` is never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
 
 ## 📋 Available Board Integrations
 

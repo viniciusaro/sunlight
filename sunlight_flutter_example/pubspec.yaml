@@ -1,0 +1,24 @@
+name: sunlight_flutter_example
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  freezed: ^3.0.3
+  composable_architecture: 0.1.0
+  composable_architecture_flutter: 0.0.8
+  recase: any
+  sunlight:
+    path: ../sunlight
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.15
