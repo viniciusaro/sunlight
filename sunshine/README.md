@@ -1,39 +1,87 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# sunshine
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+[![pub package](https://img.shields.io/pub/v/sunshine.svg)](https://pub.dev/packages/sunshine)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+Automated event documentation with screenshots for Flutter applications.
+No more spreadsheets or manual logging—just clear, consistent event records sent straight to your team board.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## 🌅 What is sunshine?
 
-## Features
+`sunshine` is a lightweight Dart package designed to work side by side with your current logging system. It automatically captures a screenshot and sends both the event metadata and image to a central board or endpoint. This helps teams:
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Monitor which events are being sent.
+- Reduce the need for manual documentation.
+- Improve visibility and QA during development.
 
-## Getting started
+## 🔧 Use Case
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Ever found yourself wondering:
 
-## Usage
+> - "Which events have we already instrumented?"
+> - "Did we forget to document this one?"
+> - "Have we documented events sent by the new screen in the flow?"
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+With sunshine, all these questions are answered. Each time you send an event, a screenshot is captured and pushed with it—making event tracking and QA much simpler.
+
+## 🧑‍💻 How to Use
+
+1. In your app initialization, set up `sunshine` with the desired options:
 
 ```dart
-const like = 'sample';
+SunshineAnalytics.setup(
+  boardClient: miroBoardClient(
+    boardId: "your_board_id",
+    token: "your_api_token",
+  ),
+);
 ```
 
-## Additional information
+2. To allow capturing screenshots you need to wrap the entire section you want to be tracked with a custom `Sunshine` widget.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+runApp(
+  MaterialApp(
+    home: Sunshine(
+      child: Home(),
+    ),
+  ),
+);
+```
+example: _main.dev.dart_
+
+3. In your current centralized analytics logging, add sunshine logs:
+
+```dart
+class CurrentAnalyticsLogger {
+  Future<void> logEvent(String name) {
+    // current analytics logging.
+    return SunshineAnalytics.log(name: name);
+  }
+}
+```
+
+## Production builds
+
+Sending a screenshot for every event fired might become heavy for production builds. That is why we recommend setting sunshine up only for development/internal builds. That is usually enough to cover all app paths without adding overhead to your production users.
+
+> If `SunshineAnalytics.setup` is never called, `SunshineAnalytics.log` becomes a no-op. So your production app stays unaffected.
+
+## 📋 Available Board Integrations
+
+Currently supported:
+
+- ✅ Miro → `miroBoardClient`
+
+Planned:
+
+- [ ] Notion
+- [ ] Figma
+- [ ] Custom webhook
+
+## 🙋‍♂️ Why "sunshine"?
+
+Just like sunshine makes things clear and visible, this package makes your event flow transparent for your whole team.
+
+## 👏 Contributions
+
+Feel free to open issues or PRs! Feedback, ideas, and use cases are very welcome.
