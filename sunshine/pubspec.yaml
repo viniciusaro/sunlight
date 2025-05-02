@@ -1,6 +1,6 @@
 name: sunshine
-description: "A new Flutter package project."
-version: 0.0.1
+description: Automated event documentation with screenshots for Flutter applications.
+version: 0.1.0
 repository: https://github.com/viniciusaro/sunshine
 
 environment:

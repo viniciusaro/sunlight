@@ -9,6 +9,7 @@ import 'package:sunshine/clients/snapshot_client.live.dart';
 
 abstract class SunshineAnalytics {
   static ScreenshotController screenshotController = ScreenshotController();
+  static var _isSetUp = false;
 
   static setup({
     required board.BoardClient boardClient,
@@ -16,6 +17,7 @@ abstract class SunshineAnalytics {
     logger.LoggerClient? loggerClient,
     bool debug = false,
   }) {
+    _isSetUp = true;
     board.boardClient = debug ? boardClient.debug.locked : boardClient.locked;
     analytics.analyticsClient = analyticsClient ?? snapshotAnalyticsClient;
     logger.loggerClient = loggerClient ?? noneLoggerClient;
@@ -23,6 +25,9 @@ abstract class SunshineAnalytics {
   }
 
   static Future<void> log({required String name}) {
+    if (!_isSetUp) {
+      return Future.sync(() => null);
+    }
     return analytics.analyticsClient.logEvent(name);
   }
 }
