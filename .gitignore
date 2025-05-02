@@ -120,5 +120,4 @@ app.*.symbols
 .fvm/
 
 # IDE
-**/.idea/
 **/*.iml
