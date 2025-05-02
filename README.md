@@ -1,6 +1,6 @@
 # sunshine
 
-[![pub package](https://img.shields.io/pub/v/sunshine.svg)](https://pub.dev/packages/sunshine)
+[![pub package](https://img.shields.io/pub/v/sunshine.svg)](https://pub.dev/packages/sunshine_events)
 
 Automated event documentation with screenshots for Flutter applications.
 No more spreadsheets or manual logging—just clear, consistent event records sent straight to your team board.
