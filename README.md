@@ -23,6 +23,8 @@ Ever found yourself wondering:
 
 With sunlight, all these questions are answered. Each time you send an event, a screenshot is captured and pushed with it—making event tracking and QA much simpler.
 
+https://github.com/user-attachments/assets/33eb80d5-854a-40f6-a668-223a72699ede
+
 ## 🧑‍💻 How to Use
 
 1. In your app initialization, set up `sunlight` with the desired options:
@@ -64,7 +66,7 @@ class CurrentAnalyticsLogger {
 
 Sending a screenshot for every event fired might become heavy for production builds. That is why we recommend setting sunlight up only for development/internal builds. That is usually enough to cover all app paths without adding overhead to your production users.
 
-> If `SunlightAnalytics.setup` is never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
+ If `SunlightAnalytics.setup` is never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
 
 ## 📋 Available Board Integrations
 
