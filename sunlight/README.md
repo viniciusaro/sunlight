@@ -23,6 +23,8 @@ Ever found yourself wondering:
 
 With sunlight, all these questions are answered. Each time you send an event, a screenshot is captured and pushed with it—making event tracking and QA much simpler.
 
+https://github.com/user-attachments/assets/33eb80d5-854a-40f6-a668-223a72699ede
+
 ## 🧑‍💻 How to Use
 
 1. In your app initialization, set up `sunlight` with the desired options:
