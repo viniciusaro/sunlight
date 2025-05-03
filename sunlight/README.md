@@ -41,7 +41,7 @@ SunlightAnalytics.setup(
 ```dart
 runApp(
   MaterialApp(
-    home: sunlight(
+    home: Sunlight(
       child: Home(),
     ),
   ),
@@ -55,7 +55,7 @@ example: _main.dev.dart_
 class CurrentAnalyticsLogger {
   Future<void> logEvent(String name) {
     // current analytics logging.
-    eturn SunlightAnalytics.log(name: name);
+    return SunlightAnalytics.log(name: name);
   }
 }
 ```

@@ -1,3 +1,3 @@
 ## 0.1.0
 
-* Initial relase with support for Miro boards. Enjoy!
+* Initial release with support for Miro boards. Enjoy!
