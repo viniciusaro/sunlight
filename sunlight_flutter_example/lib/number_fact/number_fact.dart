@@ -7,17 +7,27 @@ import 'clients/number_fact_client.dart';
 import 'clients/number_fact_client.live.dart';
 import 'reducer.analytics.dart';
 
-part 'number_fact.freezed.dart';
 part 'number_fact.g.dart';
 
-@freezed
 @KeyPathable()
-abstract class NumberFactState with _$NumberFactState {
-  factory NumberFactState({
-    @Default(0) int count,
-    @Default(false) bool isLoading,
-    String? numberFact,
-  }) = _NumberFactState;
+class NumberFactState {
+  final int count;
+  final bool isLoading;
+  final String? numberFact;
+
+  const NumberFactState({
+    this.count = 0,
+    this.isLoading = false,
+    this.numberFact,
+  });
+
+  NumberFactState copyWith({int? count, bool? isLoading, String? numberFact}) {
+    return NumberFactState(
+      count: count ?? this.count,
+      isLoading: isLoading ?? this.isLoading,
+      numberFact: numberFact ?? this.numberFact,
+    );
+  }
 }
 
 @CaseKeyPathable()
@@ -136,7 +146,7 @@ void main() {
   SunlightAnalytics.setup(
     boardClient: miroBoardClient(
       boardId: "boardId",
-      token: "token",
+      token: "token", //
     ),
   );
 
