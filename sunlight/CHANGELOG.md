@@ -9,3 +9,7 @@
 ## 0.2.0
 
 * Breaking: separate `sunlight` from `sunlight_flutter`.
+
+## 0.2.1
+
+* Minor README clarity improvements.

@@ -1,6 +1,6 @@
 name: sunlight
 description: Automatic event documentation with screenshots for Flutter applications.
-version: 0.2.0
+version: 0.2.1
 repository: https://github.com/viniciusaro/sunlight
 
 environment:
