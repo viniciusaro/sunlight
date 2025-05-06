@@ -1,6 +1,6 @@
 import 'package:path_provider/path_provider.dart';
 import 'package:screenshot/screenshot.dart';
-import 'package:sunlight/src/clients/snapshot_client.dart';
+import 'package:sunlight_flutter/sunlight_flutter.dart';
 
 SnapshotClient screenshotSnapshotClient(
   ScreenshotController screenshotController,

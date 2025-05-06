@@ -1,7 +1,8 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:screenshot/screenshot.dart';
-import 'package:sunlight/src/analytics/sunlight.dart';
+
+import '../../sunlight_flutter.dart';
 
 class Sunlight extends StatelessWidget {
   final Widget child;
@@ -11,7 +12,7 @@ class Sunlight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Screenshot(
-      controller: SunlightAnalytics.screenshotController,
+      controller: SunlightAnalyticsFlutter.screenshotController,
       child: child,
     );
   }

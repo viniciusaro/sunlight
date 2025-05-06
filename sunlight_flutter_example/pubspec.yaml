@@ -13,8 +13,8 @@ dependencies:
   composable_architecture: 0.1.0
   composable_architecture_flutter: 0.0.8
   recase: ^4.1.0
-  sunlight:
-    path: ../sunlight
+  sunlight_flutter:
+    path: ../sunlight_flutter
 
 dev_dependencies:
   flutter_test:

@@ -5,3 +5,7 @@
 ## 0.1.1
 
 * Minor typo fixes and add demo video to README.
+
+## 0.2.0
+
+* Breaking: separate `sunlight` from `sunlight_flutter`.

@@ -68,6 +68,17 @@ Sending a screenshot for every event fired might become heavy for production bui
 
  If `SunlightAnalytics.setup` is never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
 
+## 🛤️ Roadmap
+
+- ✅ Automatic screenshot taking with minimal setup.
+- ✅ Automatic board integration via `BoardClient` interface.
+- ✅ Separate analytics log from flutter package.
+
+Planned:
+- [ ] Visual identification of user interaction on screenshots taken.
+- [ ] More Board Integrations.
+- [ ] Sunlight portal.
+
 ## 📋 Available Board Integrations
 
 Currently supported:
@@ -79,6 +90,7 @@ Planned:
 - [ ] Notion
 - [ ] Figma
 - [ ] Custom webhook
+- [ ] Sunlight portal.
 
 ## 🙋‍♂️ Why "sunlight"?
 

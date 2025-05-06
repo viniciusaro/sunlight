@@ -1,7 +1,7 @@
 import 'package:composable_architecture_flutter/composable_architecture_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:recase/recase.dart';
-import 'package:sunlight/sunlight.dart';
+import 'package:sunlight_flutter/sunlight_flutter.dart';
 
 import 'clients/number_fact_client.dart';
 import 'clients/number_fact_client.live.dart';
@@ -143,7 +143,7 @@ class NumberFactWidget extends StatelessWidget {
 }
 
 void main() {
-  SunlightAnalytics.setup(
+  SunlightAnalyticsFlutter.setup(
     boardClient: miroBoardClient(
       boardId: "boardId",
       token: "token", //
