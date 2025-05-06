@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/33eb80d5-854a-40f6-a668-223a72699ede
 1. In your app initialization, set up `sunlight` with the desired options:
 
 ```dart
-SunlightAnalytics.setup(
+SunlightAnalyticsFlutter.setup(
   boardClient: miroBoardClient(
     boardId: "your_board_id",
     token: "your_api_token",
@@ -66,7 +66,7 @@ class CurrentAnalyticsLogger {
 
 Sending a screenshot for every event fired might become heavy for production builds. That is why we recommend setting sunlight up only for development/internal builds. That is usually enough to cover all app paths without adding overhead to your production users.
 
- If `SunlightAnalytics.setup` is never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
+ If `SunlightAnalyticsFlutter.setup` or `SunlightAnalyticsr.setup` are never called, `SunlightAnalytics.log` becomes a no-op. So your production app stays unaffected.
 
 ## 🛤️ Roadmap
 
